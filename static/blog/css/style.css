@@ -23,6 +23,11 @@ body {
   font-family: 'Lucida Casual', 'Comic Sans MS';
   overflow-x: hidden;
 }
+ .navbar-fixed-top .navbar-collapse {
+  margin-top: 10px;
+  top: 19px;
+  max-height: 340px;
+}
 .navbar-nav .nav-link {
   top: -14px;
   padding-right: 0;

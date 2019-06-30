@@ -23,6 +23,16 @@ body {
   font-family: 'Lucida Casual', 'Comic Sans MS';
   overflow-x: hidden;
 }
+ .navbar-fixed-top .navbar-collapse {
+  margin-top: 10px;
+  top: 19px;
+  max-height: 340px;
+}
+.navbar-nav .nav-link {
+  top: -14px;
+  padding-right: 0;
+  padding-left: 0;
+}
 
 ol, ul {
   list-style: none;
@@ -502,11 +512,36 @@ a, a:hover {
 }
 
 /****/
+@media (min-width: 900px) and (max-width: 1120px) {
+  .wrapper {
+    margin-top: 61px;
+    padding: 90px 0px 130px;
+}
+}
 
 @media (min-width: 451px) and (max-width: 900px) {
   .section-title {
     margin-bottom: 15px;
   }
+  .wrapper {
+    margin-top: 61px;
+    padding: 90px 0px 130px;
+}
+  .navbar-default .navbar-brand {
+    color: rgb(3, 124, 50);
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.navbar-toggle:hover, .navbar-toggle {
+  background-color: #fff;
+  color: #000;
+}
+.navbar-toggle {
+  margin-top: 0px;
+}
+
 }
 
 @media (min-width: 20px) and (max-width: 450px) {
@@ -549,7 +584,54 @@ a, a:hover {
   h3.txt-tl {
     font-size: 20px;
   }
+  .navbar-default .navbar-brand {
+    color: rgb(3, 124, 50);
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+div.location-info {
+  width: 351px;
+}
+.black {
+  width: 352px;
+  color: #000 !important;
+  font-weight: 600;
+}
+div.contact-info, h3.cont-title{
+  width: 326px;
+  margin-left: -19px;
+}
+
 }
 
 /****/
 
+@media (min-width: 768px) {
+.navbar-nav {
+    float: left;
+    margin: 0;
+    margin-top: -28px;
+}
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
+  padding-right: 0;
+  margin-top: -28px;
+  padding-left: 0;
+}
+div.location-info {
+  
+  width: 351px;
+}
+
+.black {
+  width: 100%;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+h3.cont-title {
+  margin-left: 19px;
+  width: 100%;
+}
+}
