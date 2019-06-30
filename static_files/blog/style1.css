@@ -1,0 +1,71 @@
+html {
+    position: relative;
+    min-height: 100%;
+
+}
+
+body {
+    font-family: 'Lucida Casual', 'Comic Sans MS';
+    position: relative; 
+}
+
+  .affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }
+
+.navbar-img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-size: auto 100%;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+a.navbar-logo.logog {
+    width: 200px;
+    height: 200px;
+}
+
+.gallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery .img-thumbnail{
+    height: 250px;
+    width: 300px;
+}
+.main-header {
+    background: url(../img/banner.jpg) no-repeat;
+    background-size: cover;
+    min-height: 610px;
+  }
+  
+  .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+ 
+  
+  .form-signin .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  
