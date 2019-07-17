@@ -25,8 +25,8 @@ SECRET_KEY = 'x&=qr_r8*yv9ri31)1)-m2*t^h7k-((_f3_0y60yb8bjsngl#v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.greendecisions.com.np','greendecisions.com.np']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['www.greendecisions.com.np','greendecisions.com.np']
+ALLOWED_HOSTS = []
 
 
 # Application definition

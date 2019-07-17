@@ -29,7 +29,7 @@ body {
   max-height: 340px;
 }
 .navbar-nav .nav-link {
-  top: -14px;
+  top: 0;
   padding-right: 0;
   padding-left: 0;
 }
@@ -616,7 +616,7 @@ div.contact-info, h3.cont-title{
 }
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
   padding-right: 0;
-  margin-top: -28px;
+  margin-top: 0;
   padding-left: 0;
 }
 div.location-info {
