@@ -26,7 +26,7 @@ SECRET_KEY = 'x&=qr_r8*yv9ri31)1)-m2*t^h7k-((_f3_0y60yb8bjsngl#v'
 DEBUG = True
 
 ALLOWED_HOSTS = ['www.greendecisions.com.np','greendecisions.com.np']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['LOCALHOST', 'sunilregmi@greendecisions.com.np']
 
 
 # Application definition
@@ -142,7 +142,6 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static_media")
 
@@ -150,3 +149,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static_media")
 LOGIN_REDIRECT_URL = 'post_list'
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '192605849424-hhudpbuitr3qtprdjc9du5ro30qp20kp.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'hyta8jYftUDTLR39EW702lJg'
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.mail.greendecisions.com.np'
+EMAIL_HOST_USER = 'sunilregmi@greendecisions.com.np'
+EMAIL_HOST_PASSWORD = 'candy871@sunil'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+ACCOUNT_EMAIL_VERIFICATION = 'none'

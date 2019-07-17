@@ -1,0 +1,70 @@
+
+   
+<header class="main-header" id="header">
+    <div class="bg-color"> 
+      <!--nav-->
+      <nav class="nav navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="197">
+        <div class="container-fluid">
+          
+          <div class="col-md-12">
+            <div class="navbar-header">
+               
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                        
+              <a href="#header" class="navbar-brand">Green Decisions</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="mynavbar">
+              <ul class="nav navbar-nav ml-auto list-group list-group-horizontal-md">
+                <li class="active"><a href="#header">Home</a></li>
+                <li><a href="#cta-1">About Us</a></li>
+                <li><a href="#feature">Services</a></li>
+                <li><a href="{% url 'post_list' %}">Blog</a></li>
+                <li><a href="#portfolio">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item dropdown nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {% if request.user.profile.photo %}
+                      <img src="{{ request.user.profile.photo.url }}" alt="icon image" class="navbar-img">
+                      {% else %}
+                      <img src="/media/download.jpeg" alt="" class="navbar-img">
+                      {% endif %}
+                      <span>Hi {{ request.user|capfirst }}</span>
+                    </a>
+                    <div class="dropdown-menu transparent nav-link" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{% url 'blog:edit_profile' %}">My Profile</a>
+                      <a class="dropdown-item" href="{% url 'blog:post_create' %}">Create Post</a>
+
+                      <a class="dropdown-item" href="{% url 'user_logout' %}">Logout</a>
+                      
+                    </div>
+                  </li>
+                  {% else %}
+                <li class="nav-item ">
+                  
+                  <a href="{% url 'user_login' %}" class="login">Login</a>
+                </li>
+                {% endif %}
+                        
+              </ul>
+             
+                
+             </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--/ nav-->
+      <div class="container text-center">
+        <div class="wrapper wow fadeInLeft delay-05s">
+            <a class="navbar-logo logog" href="#">
+                <img src="./static/blog/img/logo.png" alt="">
+              </a>
+              <h2 style="color: rgb(3, 124, 50);"><b>Green Decisions, Good Decisions!!!</b></h2>
+        </div>        
+      </div>
+    </div>
+   
+  </header>
