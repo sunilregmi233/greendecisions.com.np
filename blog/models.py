@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.utils.text import slugify
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class PublishedManager(models.Manager):
@@ -26,7 +27,7 @@ class Post(models.Model):
     title       =   models.CharField(max_length=250)
     slug        =   models.SlugField(max_length=250)
     author      =   models.ForeignKey(User, related_name='blog_posts', on_delete=models.CASCADE)
-    body        =   models.TextField()
+    body        =   RichTextField()
     likes       =   models.ManyToManyField(User, related_name='likes', blank=True)
     created     =   models.DateTimeField(auto_now_add=True)
     updated     =   models.DateTimeField(auto_now=True)

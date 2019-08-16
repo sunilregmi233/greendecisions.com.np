@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # url(r'^$', TemplateView.as_view(template_name='static_pages/index.html'), name='home'),
     path('', include('pages.urls')),
+    path('document/', include('Document.urls')),
     # path('', views.post_list, name="post_list"),
     path('blog/', include(('blog.urls', 'blog'), namespace='blog')),
     path('login/', views.user_login, name="user_login"),

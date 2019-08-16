@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'pages',
+    'Document',
     'social_django',
     'crispy_forms',
+    'ckeditor',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -160,3 +162,34 @@ EMAIL_HOST_USER = 'sunilregmi233@gmail.com'
 EMAIL_HOST_PASSWORD = 'bernoulli123'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 EMAIL_USE_TLS = True
+
+
+CKEDITOR_CONFIGS = {
+    # django-ckeditor defaults
+    'default': {
+        # Editor Width Adaptation
+        'width':'500px',
+        'height':'250px',
+        # tab key conversion space number
+        'tabSpaces': 4,
+        # Toolbar Style
+        'toolbar': 'Custom',
+        # Toolbar buttons
+        'toolbar_Custom': [
+            # Emotional Code Block
+            ['Smiley', 'CodeSnippet'], 
+            # Font Style
+            ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Blockquote'],
+            # Font color
+            ['TextColor', 'BGColor'],
+            #Link link
+            ['Link', 'Unlink'],
+            #List of items
+            ['NumberedList', 'BulletedList'],
+            #Maximization
+            ['Maximize']
+        ],
+        # Add Code Block Plug-ins
+        'extraPlugins': ','.join(['codesnippet']),
+    }
+}
